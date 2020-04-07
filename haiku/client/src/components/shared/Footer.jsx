@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => (
   <footer>
-    <p>© Copyright {new Date().getFullYear()}. All Rights Reserved.</p>
+    <h4>© copyright {new Date().getFullYear()}. all rights reserved.</h4>
   </footer>
 )
 

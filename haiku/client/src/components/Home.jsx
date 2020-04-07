@@ -12,6 +12,10 @@ function Home(props) {
 
         <h1>haiku.you.</h1>
 
+      </div>
+
+      <div className="homebox">
+        <p>There will be text here.</p>
 
 
       </div>
