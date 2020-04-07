@@ -1,4 +1,72 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  background: url("./images/haikuhome.jpg");
+  min-height: 450px;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+h1{
+font-family: 'Courier New', Courier, monospace;
+color: white;
+text-align: center;
+font-size: 70px;
+padding-top: 150px;
+
+}
+
+
+nav{
+  background-color: black;
+  height: 25px;
+
+}
+
+.links{
+  color:white;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: right;
+  display: inline-block;
+  float: right;
+  padding: 5px;
+  padding-right: 25px;
+
+}
+
+footer{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Below is css that was here when I started React */
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +103,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
