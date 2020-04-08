@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Link, Route } from 'react-router-dom';
 import Home from './components/Home'
 import Learn from './components/Learn'
+import Login from './components/Login'
+import Register from './components/Register'
 import './App.css';
 // import axios from 'axios';
 
@@ -19,10 +21,20 @@ class App extends Component {
             component={Home}
           />
 
-            <Route
-              path="/Learn"
-              component={Learn}
+          <Route
+            path="/Learn"
+            component={Learn}
           />
+
+          <Route
+            path="/Register"
+            component={Register}
+          />
+
+          {/* <Route
+            path="/Login"
+            component={Login}
+          /> */}
 
         </main>
 
