@@ -1,110 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Register extends Component {
-  constructor() {
-    super()
+const Register = (props) => {
 
-    this.state = {
-      username: '',
-      email: '',
-      password: '',
-      passwordConfirmation: '',
-      isError: false,
-      errorMsg: ''
-    }
-  }
-
-  handleChange = event =>
-    this.setState({
-      [event.target.name]: event.target.value,
-      isError: false,
-      errorMsg: ''
-    })
-
-  onRegister = event => {
-    event.preventDefault()
-
-    const { history, setUser } = this.props
-
-    signUp(this.state)
-      .then(() => signInUser(this.state))
-      .then(res => setUser(res.user))
-      .then(() => history.push('/'))
-      .catch(error => {
-        console.error(error)
-        this.setState({
-          email: '',
-          password: '',
-          passwordConfirmation: '',
-          isError: true,
-          errorMsg: 'Oops Something is Incorrect'
-        })
-      })
-  }
-
-  renderError = () => {
-    const toggleForm = this.state.isError ? 'danger' : ''
-    if (this.state.isError) {
-      return (
-        <button type="submit" className={toggleForm}>
-          {this.state.errorMsg}
-        </button>
-      )
-    } else {
-      return <button type="submit">Sign In</button>
-    }
-  }
-
-  render() {
-    const { email, username, password, passwordConfirmation } = this.state
-
-    return (
-      <div className="row">
-        <div className="form-container">
-          <h3>Sign Up</h3>
-          <form onSubmit={this.onSignUp}>
-            <label>Username</label>
-            <input
-              required
-              type="text"
-              name="username"
-              value={username}
-              placeholder="Enter username"
-              onChange={this.handleChange}
-            />
-            <label>Email address</label>
-            <input
-              required
-              type="email"
-              name="email"
-              value={email}
-              placeholder="Enter email"
-              onChange={this.handleChange}
-            />
-            <label>Password</label>
-            <input
-              required
-              name="password"
-              value={password}
-              type="password"
-              placeholder="Password"
-              onChange={this.handleChange}
-            />
-            <label>Password Confirmation</label>
-            <input
-              required
-              name="passwordConfirmation"
-              value={passwordConfirmation}
-              type="password"
-              placeholder="Confirm Password"
-              onChange={this.handleChange}
-            />
-            {this.renderError()}
-          </form>
-        </div>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <h2>Register</h2>
+      <hr />
+      <form onSubmit={props.handleRegister} >
+        <input name="email" type="text" value={props.formData.email} onChange={props.handleChange} />
+        <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
+        <button>Register</button>
+      </form>
+    </div>
+  );
 }
 
-export default Register
+export default Register;

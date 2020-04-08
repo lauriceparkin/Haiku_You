@@ -37,15 +37,8 @@ Not scientifically proven, but definitely maybe.</div>
 
         </div>
 
-        
-
-
       </div>
 
- 
-
-
-\
       <Footer />
 
     </>
