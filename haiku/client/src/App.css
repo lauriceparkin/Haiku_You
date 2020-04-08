@@ -5,7 +5,17 @@
 
 .home {
   background: url("./images/haikuhome.jpg");
-  min-height: 700px;
+  min-height: 750px;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.learn {
+  background: url("./images/learn.jpg");
+  min-height: 250px;
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -18,7 +28,7 @@ font-family: 'Courier New', Courier, monospace;
 color: white;
 text-align: center;
 font-size: 70px;
-margin-top: 180px;
+margin-top: 230px;
 }
 
 /* Orange color on home page:
@@ -39,15 +49,24 @@ nav{
   float: right;
   padding: 5px;
   padding-right: 25px;
+  text-decoration: none;
 
+}
+
+.links:hover{
+  color: #FA4927;
 }
 
 .hometext{
   color: white;
   font-weight: bold;
-  padding-top: 30px;
-  padding-left: 450px;
-  padding-right: 450px;
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.hometext:hover{
+  color: #f4c430;
 }
 
 
@@ -73,6 +92,7 @@ footer{
   background: black;
   color: white;
   font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
   text-align: center;
   position: absolute;
   width: 100%;

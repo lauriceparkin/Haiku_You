@@ -12,7 +12,7 @@ function Home(props) {
 
         <h1>haiku.you.</h1>
 
-        <p className="hometext">stuck inside all day? <br />get creative with haiku. <br />follow ancient path.</p>
+        <Link style={{ textDecoration: 'none' }} to="/Learn"><p className="hometext">stuck inside all day? <br />get creative with haiku. <br />click to find your zen.</p></Link>
 
       </div>
 
