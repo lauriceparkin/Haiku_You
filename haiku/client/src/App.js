@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Learn from './components/Learn'
 import Login from './components/Login'
 import Register from './components/Register'
+import Post from './components/Post'
 import './App.css';
 // import axios from 'axios';
 
@@ -40,10 +41,19 @@ class App extends Component {
               formData={this.state.formData} />)}
           />
 
-          {/* <Route
-            path="/Login"
-            component={Login}
-          /> */}
+
+          <Route exact path="/login" render={() => (
+            <Login
+              handleLogin={this.handleLogin}
+              handleChange={this.authHandleChange}
+              formData={this.state.formData} />)}
+          />
+
+          <Route
+            path="/Post"
+            component={ Post }
+          />
+
 
         </main>
 

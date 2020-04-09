@@ -75,6 +75,14 @@ font-size: 70px;
 margin-top: 230px;
 }
 
+
+h2{
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* Orange color on home page:
 #FA4927 */
 
@@ -127,6 +135,102 @@ nav{
   padding-right: 200px;
   height: 35vh;
 }
+
+.register{
+  background: url("./images/register.jpg");
+  min-height: 950px;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.login{
+  background: url("./images/lanternlogin.jpg");
+  min-height: 750px;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+form{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 2%;
+  margin-top: 12%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.formbox{
+  background-color: black;
+  position: fixed;
+  height: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.haikubox{
+  background-color: black;
+  position: fixed;
+  height: 400px;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.haikuinput{
+  width: 300px;
+  height: 200px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+.haikusubmit{
+  padding: 10px;
+  position: absolute;
+  margin-top: 220px;
+}
+
+button{
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+button:hover{
+  color: #FA4927;
+  cursor: pointer;
+
+}
+
+
+
+label{
+
+}
+
+.post{
+  background: url("./images/post.jpg");
+  min-height: 950px;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+}
+
+
 
 
 

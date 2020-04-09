@@ -1,37 +1,51 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './shared/Footer'
 import Navbar from './shared/Navbar'
 
 
 
+class Login extends Component {
 
 
+  render() {
+    return (
+      <>
+        <div className="login">
 
-const Login = (props) => {
+          <Navbar />
 
-  return (
-    <>
 
-    <div>
-      <h2>login</h2>
-      <hr />
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        props.handleLogin();}} >
-        <input name="email" type="text" value={props.formData.email} onChange={props.handleChange} />
-        <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
-        <button>Login</button>
-        <Link to="/register">Register</Link>
-      </form>
-    </div>
+          <h2>Login</h2>
 
-    <Footer
-      />
-      
+
+          <form onSubmit={this.props.handleLogin} >
+            <label htmlFor="email">
+              email:
+            </label>
+
+
+            <input name="email" id="email" type="text" value={this.props.formData.email} onChange={this.props.handleChange} />
+
+            <label htmlFor="password">
+              password:
+            </label>
+
+            <input name="password" id="password" type="password" value={this.props.formData.password} onChange={this.props.handleChange} />
+            <button>Login</button>
+
+
+          </form>
+        </div>
+
+        <Footer
+        />
+
+
       </>
-
-  );
+    );
+  }
 }
+
 
 export default Login;
