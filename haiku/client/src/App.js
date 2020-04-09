@@ -11,6 +11,13 @@ import './App.css';
 
 
 class App extends Component {
+  state = {
+    formData: {
+      email: "",
+      password: ""
+    }
+  }
+
   render() {
     return (
       <div>
@@ -26,9 +33,11 @@ class App extends Component {
             component={Learn}
           />
 
-          <Route
-            path="/Register"
-            component={Register}
+          <Route exact path="/register" render={() => (
+            <Register
+              handleRegister={this.handleRegister}
+              handleChange={this.authHandleChange}
+              formData={this.state.formData} />)}
           />
 
           {/* <Route

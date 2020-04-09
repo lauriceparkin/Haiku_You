@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './shared/Footer'
+import Navbar from './shared/Navbar'
 
 
-//need class component???
+
+
+
 
 const Login = (props) => {
 
