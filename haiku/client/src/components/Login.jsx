@@ -2,9 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './shared/Footer'
 
+
+//need class component???
+
 const Login = (props) => {
 
   return (
+    <>
+
     <div>
       <h2>login</h2>
       <hr />
@@ -17,6 +22,12 @@ const Login = (props) => {
         <Link to="/register">Register</Link>
       </form>
     </div>
+
+    <Footer
+      />
+      
+      </>
+
   );
 }
 

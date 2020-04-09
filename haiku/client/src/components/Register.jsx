@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Footer from './shared/Footer'
+
+
+
+// class Register extends Component {
+
+  
+
+
+
 
 const Register = (props) => {
 
   return (
+    <>
     <div>
       <h2>Register</h2>
       <hr />
@@ -11,8 +22,15 @@ const Register = (props) => {
         <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
         <button>Register</button>
       </form>
-    </div>
+      </div>
+
+      <Footer
+      />
+      
+
+      </>
   );
 }
+
 
 export default Register;
