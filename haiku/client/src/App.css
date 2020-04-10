@@ -148,7 +148,7 @@ nav{
 
 .login{
   background: url("./images/lanternlogin.jpg");
-  min-height: 750px;
+  min-height: 950px;
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -179,8 +179,8 @@ form{
 .haikubox{
   background-color: black;
   position: fixed;
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -188,8 +188,8 @@ form{
 }
 
 .haikuinput{
-  width: 300px;
-  height: 200px;
+  width: 250px;
+  height: 150px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
 }
@@ -197,7 +197,7 @@ form{
 .haikusubmit{
   padding: 10px;
   position: absolute;
-  margin-top: 220px;
+  margin-top: 180px;
 }
 
 button{
@@ -212,7 +212,6 @@ button:hover{
   cursor: pointer;
 
 }
-
 
 
 label{

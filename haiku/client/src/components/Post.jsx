@@ -34,37 +34,37 @@ class Post extends Component {
     return (
       <>
 
-      <div className="post">
+        <div className="post">
           <Navbar />
 
-          <div className="haikubox">  
+          <div className="haikubox">
 
-        <h2>Enter your Haiku!</h2>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            {/* <label>Haiku Here:</label> */}
-            <input className="haikuinput"
-              onChange={this.handleChange}
-              type="text"
-              value={haiku}
-              name="haiku"
-            />
+            <h2>Write a Haiku!</h2>
+            <form onSubmit={this.handleSubmit}>
+              <div>
+                {/* <label>Haiku Here:</label> */}
+                <input className="haikuinput"
+                  onChange={this.handleChange}
+                  type="text"
+                  value={haiku}
+                  name="haiku"
+                />
               </div>
-              
-                <div className="haikusubmit">
+
+              <div className="haikusubmit">
 
                 <button>Submit</button>
-                </div>
+              </div>
 
-        </form>
-          </div>
-          
+            </form>
           </div>
 
-          <Footer
+        </div>
+
+        <Footer
         />
-        
-        </>
+
+      </>
     )
   }
 }

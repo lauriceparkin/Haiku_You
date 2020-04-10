@@ -15,6 +15,7 @@ class Login extends Component {
 
           <Navbar />
 
+          <div className="formbox">
 
           <h2>Login</h2>
 
@@ -36,7 +37,8 @@ class Login extends Component {
 
 
           </form>
-        </div>
+          </div>
+          </div>
 
         <Footer
         />
