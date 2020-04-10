@@ -5,6 +5,7 @@ import Navbar from './shared/Navbar'
 import { showHaikus } from '../services/apihelper'
 
 
+
 class View extends React.Component {
   constructor(props) {
     super(props)
@@ -26,15 +27,14 @@ class View extends React.Component {
       <div className="showHaikus">
         {
           this.state.haikus.length > 0 &&
-          
-            this.state.haikus.map((poem, index) => (
 
-              <div key={index}>
-                {poem.content}
-                {us}
-                
-              </div>
-            )
+          this.state.haikus.map((poem, index) => (
+
+            <div key={index}>
+              {poem.content}
+              {poem.user.username}
+            </div>
+          )
           )
         }
 

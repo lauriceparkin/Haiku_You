@@ -45,6 +45,11 @@ export const showHaikus = async () => {
   return resp.data;
 }
 
+export const showUser = async (id) => {
+  const resp = await api.get(`/users/${id}`)
+  return resp.data;
+}
+
 
 export const postHaiku = async (item) => {
   const resp = await api.post(`/poems`, { poem: item })
