@@ -6,6 +6,7 @@ import Learn from './components/Learn'
 import Login from './components/Login'
 import Register from './components/Register'
 import Post from './components/Post'
+import View from './components/View'
 import './App.css';
 // import axios from 'axios';
 
@@ -51,7 +52,12 @@ class App extends Component {
 
           <Route
             path="/Post"
-            component={ Post }
+            component={Post}
+          />
+
+          <Route
+            path="/View"
+            component={View}
           />
 
 

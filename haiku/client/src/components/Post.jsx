@@ -17,17 +17,14 @@ class Post extends Component {
   handleChange(event) {
     const { target: { name: fieldName, value: fieldValue } } = event
 
-
     this.setState({
       [fieldName]: fieldValue
     })
   }
-
   handleSubmit(event) {
     event.preventDefault()
 
   }
-
 
   render() {
     const { haiku } = this.state
