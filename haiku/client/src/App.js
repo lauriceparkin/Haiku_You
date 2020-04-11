@@ -20,7 +20,7 @@ import {
 
 class App extends Component {
   state = {
-    formData: {
+    authformData: {
       email: "",
       password: ""
     }
@@ -29,7 +29,7 @@ class App extends Component {
 
   handleRegister = async (e) => {
     e.preventDefault();
-    const currentUser = await registerUser(this.state.authFormData);
+    const currentUser = await registerUser(this.state.authformData);
     this.setState({ currentUser })
   }
 
@@ -39,9 +39,6 @@ class App extends Component {
     this.setState({ currentUser })
   }
 
-  handleLoginButton = () => {
-    this.props.history.push("/login")
-  }
 
   handleVerify = async () => {
     const currentUser = await verifyUser();
@@ -53,8 +50,8 @@ class App extends Component {
   authHandleChange = (e) => {
     const { name, value } = e.target;
     this.setState(prevState => ({
-      authFormData: {
-        ...prevState.authFormData,
+      authformData: {
+        ...prevState.authformData,
         [name]: value
       }
     }));
@@ -69,7 +66,6 @@ class App extends Component {
   }
 
 
-  //need to put handle register, change, login
 
   render() {
     return (
@@ -90,7 +86,7 @@ class App extends Component {
             <Register
               handleRegister={this.handleRegister}
               handleChange={this.authHandleChange}
-              formData={this.state.formData} />)}
+              formData={this.state.authformData} />)}
           />
 
 
@@ -98,7 +94,7 @@ class App extends Component {
             <Login
               handleLogin={this.handleLogin}
               handleChange={this.authHandleChange}
-              formData={this.state.formData} />)}
+              formData={this.state.authformData} />)}
           />
 
           <Route
