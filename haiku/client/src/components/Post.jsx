@@ -15,12 +15,14 @@ class Post extends Component {
   }
 
   handleChange(event) {
-    const { target: { name: fieldName, value: fieldValue } } = event
+    const { target: { name, value} } = event
 
     this.setState({
-      [fieldName]: fieldValue
+      [name]: value
     })
   }
+
+  //not complete, call Create Haiku function from api helper//inside handle submit function
   handleSubmit(event) {
     event.preventDefault()
 
@@ -40,7 +42,7 @@ class Post extends Component {
             <form onSubmit={this.handleSubmit}>
               <div>
                 {/* <label>Haiku Here:</label> */}
-                <input className="haikuinput"
+                <textarea className="haikuinput"
                   onChange={this.handleChange}
                   type="text"
                   value={haiku}
