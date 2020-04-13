@@ -30,9 +30,18 @@ class View extends React.Component {
 
           this.state.haikus.map((poem, index) => (
 
-            <div key={index}>
-              {poem.content}
-              {poem.user.username}
+            <div className="paperview" key={index}>
+
+              <h3>all the haikus</h3>
+
+              <br />
+
+
+              <div key={index}>
+                  {poem.content}
+                  <br />
+                  {poem.user.username}
+                </div>
             </div>
           )
           )

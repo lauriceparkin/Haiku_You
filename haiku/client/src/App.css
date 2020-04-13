@@ -23,6 +23,15 @@
   width: 100%;
 }
 
+.showHaikus {
+  background: url("./images/haikuhome.jpg");
+  min-height: 900px;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
 
 
 .paper{
@@ -34,8 +43,16 @@
   margin-left: -450px;
   margin-right: 200px;
   padding: 30px; 
-
 }
+
+.paperview {
+  background-color: white;
+  
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
+
+  
 
 .title{
   font-family: 'Courier New', Courier, monospace;
@@ -187,6 +204,20 @@ form{
 
 }
 
+.center{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  height: 80vh;
+  margin: 0;
+  place-items: center center;
+  width: 300px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
 .haikuinput{
   width: 250px;
   height: 150px;
@@ -198,6 +229,24 @@ form{
   padding: 10px;
   position: absolute;
   margin-top: 180px;
+}
+
+.pwsubmit{
+  padding: 10px;
+  position: absolute;
+  margin-top: 130px;
+}
+
+.emailsubmit{
+  padding: 10px;
+  position: absolute;
+  margin-top: 100px;
+}
+
+.usersubmit{
+  padding: 10px;
+  position: absolute;
+  margin-top: 100px;
 }
 
 button{

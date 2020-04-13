@@ -21,6 +21,7 @@ import {
 class App extends Component {
   state = {
     authformData: {
+      username: "",
       email: "",
       password: ""
     }
@@ -35,6 +36,8 @@ class App extends Component {
 
 
   handleLogin = async () => {
+
+    console.log("am I here")
     const currentUser = await loginUser(this.state.authformData);
     this.setState({ currentUser })
   }
@@ -71,51 +74,49 @@ class App extends Component {
     return (
       <div>
 
-        <main>
-          <Route
-            exact path="/"
-            component={Home}
-          />
+        <Route
+          exact path="/"
+          component={Home}
+        />
 
-          <Route
-            path="/Learn"
-            component={Learn}
-          />
+        <Route
+          path="/Learn"
+          component={Learn}
+        />
 
-          <Route exact path="/register" render={() => (
-            <Register
-              handleRegister={this.handleRegister}
-              handleChange={this.authHandleChange}
-              formData={this.state.authformData} />)}
-          />
-
-
-          <Route exact path="/login" render={() => (
-            <Login
-              handleLogin={this.handleLogin}
-              handleChange={this.authHandleChange}
-              formData={this.state.authformData} />)}
-          />
-
-          <Route
-            path="/Post"
-            component={Post}
-          />
-
-          <Route
-            path="/View"
-            component={View}
-          />
+        <Route exact path="/register" render={() => (
+          <Register
+            handleRegister={this.handleRegister}
+            handleChange={this.authHandleChange}
+            formData={this.state.authformData} />)}
+        />
 
 
-        </main>
+        <Route exact path="/login" render={() => (
+          <Login
+            handleLogin={this.handleLogin}
+            handleChange={this.authHandleChange}
+            formData={this.state.authformData} />)}
+        />
+
+
+        <Route exact path="/Post" render={() => (
+          <Post
+            handleSubmit={this.handleSubmit}
+            currentUser={this.state.currentUser}
+          />)}
+        />
+
+        <Route
+          path="/View"
+          component={View}
+        />
 
       </div>
 
     );
   }
 }
-
 
 
 

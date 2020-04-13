@@ -20,7 +20,7 @@ class Login extends Component {
           <h2>Login</h2>
 
 
-          <form onSubmit={this.props.handleLogin} >
+          <form className="center" onSubmit={this.props.handleLogin} >
             <label htmlFor="email">
               email:
             </label>

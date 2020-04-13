@@ -51,8 +51,8 @@ export const showUser = async (id) => {
 }
 
 
-export const postHaiku = async (item) => {
-  const resp = await api.post(`/poems`, { poem: item })
+export const postHaiku = async (haiku, user_id) => {
+  const resp = await api.post(`/poems`, { poem: { content: haiku, user_id: user_id}  })
   return resp.data
 }
 
