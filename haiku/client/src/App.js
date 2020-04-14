@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, withRouter } from 'react-router-dom';
 import Home from './components/Home'
 import Learn from './components/Learn'
 import Login from './components/Login'
@@ -8,6 +8,7 @@ import Register from './components/Register'
 import Post from './components/Post'
 import View from './components/View'
 import './App.css';
+import IndivHaiku from './components/IndivHaiku'
 import {
   loginUser,
   registerUser,
@@ -24,7 +25,9 @@ class App extends Component {
       username: "",
       email: "",
       password: ""
-    }
+    },
+    currentUser: null
+
   }
 
 
@@ -32,22 +35,26 @@ class App extends Component {
     e.preventDefault();
     const currentUser = await registerUser(this.state.authformData);
     this.setState({ currentUser })
+    this.props.history.push("/Post")
   }
 
 
-  handleLogin = async () => {
-
+  handleLogin = async (e) => {
+    e.preventDefault();
     console.log("am I here")
     const currentUser = await loginUser(this.state.authformData);
     this.setState({ currentUser })
+    this.props.history.push("/View")
   }
 
 
   handleVerify = async () => {
     const currentUser = await verifyUser();
     if (currentUser) {
+      console.log("testing 123")
       this.setState({ currentUser })
     }
+    console.log('test')
   }
 
   authHandleChange = (e) => {
@@ -66,6 +73,10 @@ class App extends Component {
       currentUser: null
     })
     removeToken();
+  }
+
+  componentDidMount = async () => {
+    await this.handleVerify()
   }
 
 
@@ -107,10 +118,25 @@ class App extends Component {
           />)}
         />
 
-        <Route
+        <Route 
+          
           path="/View"
-          component={View}
+          render={() => (
+            <View/>
+          )}
+
         />
+
+        <Route
+          path="/full_haiku/:id"
+          render={(props) => (
+            <IndivHaiku
+              id={props.match.params.id}
+              currentUser={this.state.currentUser}
+            />
+          )}
+          
+          />
 
       </div>
 
@@ -120,4 +146,4 @@ class App extends Component {
 
 
 
-export default App;
+export default withRouter(App);

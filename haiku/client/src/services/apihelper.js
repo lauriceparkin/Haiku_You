@@ -30,6 +30,7 @@ export const verifyUser = async () => {
   if (token) {
     api.defaults.headers.common.authorization = `Bearer ${token}`
     const resp = await api.get('/auth/verify');
+    console.log(resp)
     return resp.data
   }
   return false
@@ -44,6 +45,13 @@ export const showHaikus = async () => {
   // console.log(resp)
   return resp.data;
 }
+
+export const getOneHaiku = async (haiku_id) => {
+  const resp = await api.get(`/poems/${haiku_id}`);
+  console.log(resp)
+  return resp.data
+}
+
 
 export const showUser = async (id) => {
   const resp = await api.get(`/users/${id}`)
@@ -64,3 +72,26 @@ export const destroyHaiku = async (id) => {
   const resp = await api.delete(`/poems/${id}`);
   return resp.data;
 }
+
+
+
+export const getComments = async (haiku_id) => {
+  const resp = await api.get(`/poems/${haiku_id}/comments`);
+  return resp.data;
+}
+
+export const postComment = async (haiku_id, commentData) => {
+  const resp = await api.post(`/poems/${haiku_id}/comments`, { comment: commentData });
+  return resp.data;
+}
+
+export const putComment = async (comment_id, commentData) => {
+  const resp = await api.put(`/poems/:haiku_id/comments/${comment_id}`, commentData);
+  return resp.data;
+}
+
+export const deleteComment = async (comment_id) => {
+  const resp = await api.delete(`/poems/:haiku_id/comments/${comment_id}`);
+  return resp.data;
+}
+

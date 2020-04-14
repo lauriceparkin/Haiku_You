@@ -27,7 +27,7 @@ class Post extends Component {
   handleSubmit(event) {
     event.preventDefault()
     //need to work out how user name is called
-    const results = postHaiku(this.state.haiku, 1)
+    const results = postHaiku(this.state.haiku, this.props.currentUser.id)
 
   }
 

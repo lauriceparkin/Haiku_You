@@ -41,8 +41,17 @@ class View extends React.Component {
                   {poem.content}
                   <br />
                   {poem.user.username}
-                </div>
+              </div>
+
+              <Link to={`/full_haiku/${poem.id}`}>
+              
+              <button id={poem.id}>Show Haiku</button>
+            
+              </Link>
+
             </div>
+
+        
           )
           )
         }
