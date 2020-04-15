@@ -35,7 +35,7 @@ export default class UpdateHaiku extends Component {
           onChange={this.handleChange}
         />
 
-        <button>Submit</button>
+        <button>submit</button>
 
       </form>
     )

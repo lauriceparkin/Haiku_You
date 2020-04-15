@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default class CreateComment extends React.Component {
   state = {
     commentData: {
@@ -21,6 +22,7 @@ export default class CreateComment extends React.Component {
     return (
       <>
 
+        <div>
         <form onSubmit={(event) => {
           event.preventDefault()
           this.props.createComment(this.props.haiku_id, this.state.commentData)
@@ -29,14 +31,16 @@ export default class CreateComment extends React.Component {
           <textarea
             name="comment_content"
             id="comment_content"
-            placeholder="Enter your comment here:"
+            placeholder="leave a comment:"
             value={this.state.commentData.comment_content}
             onChange={this.handleChange}
-          />
+            />
+            
+          <button>submit</button>
 
-          <button>Submit Comment</button>
-
-        </form>
+          </form>
+          
+          </div>
 
       </>
 

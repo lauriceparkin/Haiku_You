@@ -31,6 +31,7 @@ class View extends React.Component {
         <Navbar
           />
 
+
         <h3 className="titleview">find some zen</h3>
 
 

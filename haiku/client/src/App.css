@@ -36,12 +36,11 @@
 
 .paper{
   background-color: white;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -200px;
-  margin-left: -450px;
-  margin-right: 200px;
+  position: absolute;
+  align-content: center;
+  width: 700px;
+  margin-left: 20%;
+  margin-top: 60px; 
   padding: 30px; 
 }
 
@@ -49,14 +48,13 @@
   background-color: white;
   font-family: 'Courier New', Courier, monospace;
   color: black;
-  margin-right: 200px;
-  margin-left: 200px;
-  padding: 25px;
+  margin-right: 150px;
+  margin-left: 150px;
+  padding: 20px;
   display: grid;
   place-items: center;
 }
 
-  
 
 .title{
   font-family: 'Courier New', Courier, monospace;
@@ -114,14 +112,10 @@ h2{
   margin-top: 20px;
 }
 
-/* Orange color on home page:
-#FA4927 */
-
 
 nav{
   background-color: black;
   height: 25px;
-
 }
 
 .links{
@@ -133,7 +127,6 @@ nav{
   padding: 5px;
   padding-right: 25px;
   text-decoration: none;
-
 }
 
 .links:hover{
@@ -151,7 +144,6 @@ nav{
   justify-content: center;
   align-items: center;
 }
-
 
 .hometext:hover{
   color: #f4c430;
@@ -215,7 +207,6 @@ form{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 .center{
@@ -229,8 +220,6 @@ form{
   width: 300px;
   font-family: 'Courier New', Courier, monospace;
 }
-
-
 
 .haikuinput{
   width: 250px;
@@ -273,13 +262,8 @@ button{
 button:hover{
   color: #FA4927;
   cursor: pointer;
-
 }
 
-
-label{
-
-}
 
 .post{
   background: url("./images/post.jpg");
@@ -289,22 +273,62 @@ label{
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-
 }
 
 
+.onehaiku{
+  background-color: white;
+  margin-top: 50px;
+  padding: 25px;
+  display: grid;
+  place-items: center;
+}
 
+.editbutton{
+  font-family: 'Courier New', Courier, monospace;
+  display: grid;
+  place-items: center;
 
+}
 
+textarea{
+  display: grid;
+  place-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+}
 
-/* .homebox{
-  background-color: gray;;
-  height: 35vh;
-  padding-top: 50px;
-  padding-left: 125px;
-  padding-right: 125px;
+.centercomment{
+  display: grid;
+  height: 30vh;
+  margin: 0;
+  place-items: center center;
+  width: 300px;
+  font-family: 'Courier New', Courier, monospace;
 
-} */
+}
+
+p.comment{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+.back{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.back:hover{
+  color: #FA4927;
+  cursor: pointer;
+}
+
 
 p{
   font-family: 'Courier New', Courier, monospace;
@@ -322,20 +346,7 @@ footer{
   position: absolute;
   width: 100%;
 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

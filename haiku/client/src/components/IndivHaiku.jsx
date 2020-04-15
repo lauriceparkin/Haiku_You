@@ -52,19 +52,18 @@ export default class IndivHaiku extends React.Component {
         {
 
           this.state.oneHaiku &&
-          <div id={this.state.oneHaiku.id}>
-
-            <h2>showing individual haiku from user</h2>
+          <div className="onehaiku" id={this.state.oneHaiku.id}>
 
             {!this.state.isEdit
               ?
               <>
                 <p>{this.state.oneHaiku.content}</p>
-                <button onClick={() => {
+                <br />
+                <button className="editbutton" onClick={() => {
                   this.setState({
                     isEdit: true
                   })
-                }}>Edit Your Haiku</button>
+                }}>edit your haiku</button>
               </>
               :
 
@@ -74,6 +73,7 @@ export default class IndivHaiku extends React.Component {
               />
 
             }
+            <br />
             <p>- {this.props.currentUser.username}</p>
 
 
@@ -89,12 +89,14 @@ export default class IndivHaiku extends React.Component {
               deleteComment={this.deleteComment}
               comments={this.state.comments}
             />
-
+              
 
           </div>
+
+          
         }
 
-
+          
       </>
     )
   }

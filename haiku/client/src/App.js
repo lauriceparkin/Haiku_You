@@ -41,7 +41,6 @@ class App extends Component {
 
   handleLogin = async (e) => {
     e.preventDefault();
-    console.log("am I here")
     const currentUser = await loginUser(this.state.authformData);
     this.setState({ currentUser })
     this.props.history.push("/View")
@@ -54,7 +53,6 @@ class App extends Component {
       console.log("testing 123")
       this.setState({ currentUser })
     }
-    console.log('test')
   }
 
   authHandleChange = (e) => {
