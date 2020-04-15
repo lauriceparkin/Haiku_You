@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from './shared/Footer'
 import Navbar from './shared/Navbar'
 import { postHaiku } from '../services/apihelper'
 
@@ -23,10 +22,8 @@ class Post extends Component {
     })
   }
 
-  //not complete, call Create Haiku function from api helper//inside handle submit function
   handleSubmit(event) {
     event.preventDefault()
-    //need to work out how user name is called
     const results = postHaiku(this.state.haiku, this.props.currentUser.id)
 
   }
@@ -63,9 +60,7 @@ class Post extends Component {
 
         </div>
 
-        <Footer
-        />
-
+        
       </>
     )
   }

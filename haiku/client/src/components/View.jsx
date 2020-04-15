@@ -25,51 +25,49 @@ class View extends React.Component {
   render() {
     return (
       <>
-        
+
         <div className="showHaikus">
-          
-        <Navbar
+
+          <Navbar
           />
 
 
-        <h3 className="titleview">find some zen</h3>
+          <h3 className="titleview">find some zen</h3>
 
 
-        {
-          this.state.haikus.length > 0 &&
+          {
+            this.state.haikus.length > 0 &&
 
-          this.state.haikus.map((poem, index) => (
-
-          
-
-            <div className="paperview" key={index}>
+            this.state.haikus.map((poem, index) => (
 
 
-              <div key={index}>
-                {poem.content}
-                <br />
-                {poem.user.username}
+              <div className="paperview" key={index}>
+
+
+                <div key={index}>
+                  {poem.content}
+                  <br />
+                  {poem.user.username}
+                </div>
+
+                <Link to={`/full_haiku/${poem.id}`}>
+
+                  <button id={poem.id}>Show Haiku</button>
+
+                </Link>
+
               </div>
 
-              <Link to={`/full_haiku/${poem.id}`}>
 
-                <button id={poem.id}>Show Haiku</button>
-
-              </Link>
-
-            </div>
-
-      
 
             )
-          )
-        }
+            )
+          }
 
-      </div>
+        </div>
       </>
     )
   }
-
 }
 
 export default View;

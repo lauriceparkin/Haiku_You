@@ -100,8 +100,6 @@ export default class IndivHaiku extends React.Component {
       </>
     )
   }
-
-
 }
 
 

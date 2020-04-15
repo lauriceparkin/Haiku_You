@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from './shared/Footer'
 import Navbar from './shared/Navbar'
 
 
@@ -18,7 +17,7 @@ class Login extends Component {
           <div className="formbox">
 
             <h2>Login</h2>
-            
+
             <br />
 
 
@@ -41,8 +40,6 @@ class Login extends Component {
           </form>
           </div>
           </div>
-
-      
 
       </>
     );

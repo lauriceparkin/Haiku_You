@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Footer from './shared/Footer'
 import Navbar from './shared/Navbar'
 
 function Learn(props) {
@@ -11,7 +10,6 @@ function Learn(props) {
         <Navbar />
 
         <div className="paper">
-          {/* <img src={require("../images/paper1.jpg")} /> */}
           <div className="title">haiku 101<br /></div>
           <div className="faq"><h4>What is Haiku?</h4><br />
             A form of poetry that originated in Japan. A traditional haiku consist of 17 syllables divided among three lines: 5 syllables / 7 syllables / 5 syllables. It has a ryhthm like music.<br />
@@ -47,7 +45,5 @@ function Learn(props) {
 
   )
 }
-
-
 
 export default Learn;

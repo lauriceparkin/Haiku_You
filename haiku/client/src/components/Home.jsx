@@ -19,15 +19,11 @@ function Home(props) {
     
       </div>
 
-  
-
       <Footer />
       
       </>
-
   )
 }
-
 
 
 export default Home;

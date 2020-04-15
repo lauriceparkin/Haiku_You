@@ -29,7 +29,6 @@ class Register extends Component {
               <input name="username" id="username" type="text" value={this.props.formData.username} onChange={this.props.handleChange} />
 
 
-
               <label htmlFor="email">
                 email:
                   </label>
