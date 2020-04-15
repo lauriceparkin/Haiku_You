@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Footer from './shared/Footer'
 import Navbar from './shared/Navbar'
 
 
@@ -7,65 +6,54 @@ import Navbar from './shared/Navbar'
 class Register extends Component {
 
 
-    render() {
-      return (
-        <>
-          <div className="register">
+  render() {
+    return (
+      <>
+        <div className="register">
 
-            <Navbar />
+          <Navbar />
 
 
 
-            <div className="formbox">
+          <div className="formbox">
 
-              <h2>register</h2>
-              <br />
+            <h2>register</h2>
+            <br />
 
-              <form className="center" onSubmit={this.props.handleRegister} >
+            <form className="center" onSubmit={this.props.handleRegister} >
 
-                <label htmlFor="username">
-                  username:
+              <label htmlFor="username">
+                username:
               </label>
 
-                <input name="username" id="username" type="text" value={this.props.formData.username} onChange={this.props.handleChange} />
+              <input name="username" id="username" type="text" value={this.props.formData.username} onChange={this.props.handleChange} />
 
 
 
-                  <label htmlFor="email">
-                    email:
+              <label htmlFor="email">
+                email:
                   </label>
 
-                  <input name="email" id="email" type="text" value={this.props.formData.email} onChange={this.props.handleChange} />
+              <input name="email" id="email" type="text" value={this.props.formData.email} onChange={this.props.handleChange} />
 
-
-
-
-                <label htmlFor="password">
-                  password:
+              <label htmlFor="password">
+                password:
                 </label>
 
-                <input name="password" id="password" type="password" value={this.props.formData.password} onChange={this.props.handleChange} />
+              <input name="password" id="password" type="password" value={this.props.formData.password} onChange={this.props.handleChange} />
+
+              <button>Register</button>
 
 
-
-                  <button>Register</button>
-                  
-            
-
-
-              </form>
-            </div>
-
+            </form>
           </div>
 
-          <Footer
-          />
+        </div>
 
-
-        </>
-      );
-    }
+      </>
+    );
   }
+}
 
 
 

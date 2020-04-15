@@ -47,9 +47,13 @@
 
 .paperview {
   background-color: white;
-  
   font-family: 'Courier New', Courier, monospace;
   color: black;
+  margin-right: 200px;
+  margin-left: 200px;
+  padding: 25px;
+  display: grid;
+  place-items: center;
 }
 
   
@@ -59,6 +63,16 @@
   font-weight: bold;
   font-size: 30px;
   text-align: center;
+}
+
+.titleview{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  padding: 25px;
+  padding-top: 30px
 }
 
 
@@ -179,7 +193,7 @@ form{
   justify-content: center;
   color:white;
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 2%;
+  margin-left: 10%;
   margin-top: 12%;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -209,7 +223,7 @@ form{
   justify-content: center;
   align-items: center; */
   display: grid;
-  height: 80vh;
+  height: 45vh;
   margin: 0;
   place-items: center center;
   width: 300px;

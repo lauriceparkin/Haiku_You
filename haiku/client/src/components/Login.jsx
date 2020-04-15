@@ -17,7 +17,9 @@ class Login extends Component {
 
           <div className="formbox">
 
-          <h2>Login</h2>
+            <h2>Login</h2>
+            
+            <br />
 
 
           <form className="center" onSubmit={this.props.handleLogin} >
@@ -40,9 +42,7 @@ class Login extends Component {
           </div>
           </div>
 
-        <Footer
-        />
-
+      
 
       </>
     );

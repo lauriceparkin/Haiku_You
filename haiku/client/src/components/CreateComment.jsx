@@ -7,7 +7,6 @@ export default class CreateComment extends React.Component {
     }
   }
 
-
   handleChange = (event) => {
     const { name, value } = event.target
     this.setState(prevState => ({
