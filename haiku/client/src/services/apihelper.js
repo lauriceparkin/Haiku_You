@@ -4,7 +4,7 @@ import axios from "axios";
 // const axios = require('axios');
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: process.env.NODE_ENV === 'production' ? 'https://haikup4.herokuapp.com/' : 'http://localhost:3000'
 });
 
 // ====================================
@@ -60,7 +60,7 @@ export const showUser = async (id) => {
 
 
 export const postHaiku = async (haiku, user_id) => {
-  const resp = await api.post(`/poems`, { poem: { content: haiku, user_id: user_id}  })
+  const resp = await api.post(`/poems`, { poem: { content: haiku, user_id: user_id } })
   return resp.data
 }
 
