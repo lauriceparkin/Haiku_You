@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from './shared/Footer'
 import Navbar from './shared/Navbar'
+import { postHaiku } from '../services/apihelper'
 
 
 class Post extends Component {
@@ -15,16 +15,16 @@ class Post extends Component {
   }
 
   handleChange(event) {
-    const { target: { name, value} } = event
+    const { target: { name, value } } = event
 
     this.setState({
       [name]: value
     })
   }
 
-  //not complete, call Create Haiku function from api helper//inside handle submit function
   handleSubmit(event) {
     event.preventDefault()
+    const results = postHaiku(this.state.haiku, this.props.currentUser.id)
 
   }
 
@@ -60,9 +60,7 @@ class Post extends Component {
 
         </div>
 
-        <Footer
-        />
-
+        
       </>
     )
   }
